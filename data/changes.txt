@@ -1,0 +1,138 @@
+$ cd sinatra_todos/
+RVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /Users/bennievandermerwe/launch-school-code/sinatra_todos/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+
+
+in ~/launch-school-code/sinatra_todos
+$ git log >> changes.txt
+
+in ~/launch-school-code/sinatra_todos
+$ cat changes.txt
+commit a54ebdf5382c2f68b37b7a2b385fd350f5b06388
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed Jun 21 08:09:29 2017 +0200
+
+    addded 'id' fields for todos and lists
+
+commit b3f9207a42926fd6769a726483ff06b35e4c971d
+Author: gitvar <benvanderm@gmail.com>
+Date:   Fri Jun 2 21:43:16 2017 +0200
+
+    Updated for random text, or spaces as params[:id] (for @list_id).
+
+commit 62099fd3fbce845425291309979387353f790c99
+Author: gitvar <benvanderm@gmail.com>
+Date:   Fri Jun 2 14:06:58 2017 +0200
+
+    Handling bad input - done. Even garbage text in place of a valid index value (list_id).
+
+commit 41c67f1808341e2c54519405d8a9d7d34f65a2b0
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue May 30 14:43:48 2017 +0200
+
+    Final code.
+
+commit c750ca8f30f09da69190c78581bde60dbcfe1025
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue May 23 22:02:18 2017 +0200
+
+    Up to assignment 22, Using Helper methods to apply styles in the view templates.
+
+commit 5a22a8a1526bf23bc92ce3c0eeb3f3665bb64ebe
+Author: gitvar <benvanderm@gmail.com>
+Date:   Mon May 22 21:51:21 2017 +0200
+
+    Can now mark all todo items as complete for each Todo list.
+    Modified all :id names to either @list_id OR @todo_id throughout the code.
+
+commit 2442a894c8563a02dfcc9a31495ef973c5d231c3
+Author: gitvar <benvanderm@gmail.com>
+Date:   Sun May 21 23:34:08 2017 +0200
+
+    Up to Lesson 20 - Marking Todos as done or not.
+
+commit d37a0b00d5f2f73062071087f97090e81d2a0bde
+Author: gitvar <benvanderm@gmail.com>
+Date:   Sat May 20 19:27:26 2017 +0200
+
+    Can now Add a Todo item and app also checks for valid Todo item name.
+
+commit 1552b2500a4ac801d2d51f62be925fa2b5805c7a
+Author: gitvar <benvanderm@gmail.com>
+Date:   Fri May 19 13:39:51 2017 +0200
+
+    Taken out Confirm to Delete in order to conform with LS lessons.
+
+commit 497ef57da19e117c6893711d32d3f8243503e5ab
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu May 18 20:57:29 2017 +0200
+
+    Added todo list name to sukses message.
+
+commit 99c9c427ca60c24b06646649606a10cf34d6cd60
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu May 18 20:50:04 2017 +0200
+
+    Add, Edit and Delete a Todo List. Confirm deletion without JS,
+
+commit e80574893bbbe61cebde265ed54d75923bd3ad88
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed May 17 22:33:05 2017 +0200
+
+    Moved common links with the "content_for" Sinatra module.
+
+commit e6efd131b92dffa24ab4d6c0888d681d4178eacc
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed May 17 22:12:11 2017 +0200
+
+    Render single todo list on a page (no list details as yet).
+
+commit 241496ba100a20a5bccfb4c1c3d899645214c138
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed May 17 22:06:32 2017 +0200
+
+    View single list name on a page (no details yet).
+
+commit 6827b61787f9ef62aaa59eb046586617c6af8076
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed May 17 16:15:00 2017 +0200
+
+    First iteration for the "error_for_list_name" method.
+
+commit 6726e13ed32fea3cde7cf9338883cf23afd4c96c
+Author: gitvar <benvanderm@gmail.com>
+Date:   Wed May 17 15:57:47 2017 +0200
+
+    Before refactoring the "Create a new list" POST.
+    It still has the if, elsif, end statement.
+
+commit f637c6566e0908358b85bf6601b20c1823c65d60
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue May 16 22:54:46 2017 +0200
+
+    Creating a new todo list. Assignment 6.
+
+commit 8e538afc73b60730b1ac68b7a46d218b6848829e
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue May 16 16:07:25 2017 +0200
+
+    Before the "new list" form.
+
+commit 435c2befbcb54d218585fe5c7032f61a5ecdc968
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue May 16 13:43:00 2017 +0200
+
+    Pre-session lesson.
+
+commit 6bf2bbf25714f80efc9a4628619d7090725531d9
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu May 11 22:01:11 2017 +0200
+
+    Changed the file attributes of the layout.erb file.
+
+commit 227a434a83c99f5c60bce832941cebbcf3f555b4
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu May 11 21:57:11 2017 +0200
+
+    first commit
