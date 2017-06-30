@@ -1,8 +1,10 @@
 <!-- views/list.erb -->
+<% if session[:message] %>
+  <p><%= session.delete(:message) %></p>
+<% end %>
+
 <ul>
   <% @files.each do |file| %>
-    <li>
-      <a href="/<%= file %>"><%= file %></a>
-    </li>
+    <li><a href="/<%= file %>"><%= file %></a></li>
   <% end %>
 </ul>
