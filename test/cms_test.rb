@@ -17,7 +17,7 @@ class CMSTest < Minitest::Test
 
     assert_equal 200, last_response.status
     assert_equal "text/html;charset=utf-8", last_response["Content-Type"]
-    assert_includes last_response.body, "about.txt"
+    assert_includes last_response.body, "about.md"
     assert_includes last_response.body, "changes.txt"
     assert_includes last_response.body, "history.txt"
   end
@@ -31,29 +31,28 @@ class CMSTest < Minitest::Test
   end
 
   def test_viewing_text_2_document
-    get "/about.txt"
-
-    assert_equal 200, last_response.status
-    assert_equal "text/plain", last_response["Content-Type"]
-    assert_includes last_response.body, "Ruby author Yukihiro Matsumoto"
-  end
-
-  def test_viewing_text_3_document
     get "/changes.txt"
 
     assert_equal 200, last_response.status
     assert_equal "text/plain", last_response["Content-Type"]
-    assert_includes last_response.body, "Author: gitvar <benvanderm@gmail.com>"
+    assert_includes last_response.body, "addded 'id' fields for todos and lists"
   end
 
   def test_document_not_found
     get "/notafile.ext"
-
     assert_equal 302, last_response.status
 
     get last_response["Location"]
-
     assert_equal 200, last_response.status
     assert_includes last_response.body, "notafile.ext does not exist"
   end
+
+  def test_viewing_markdown_document
+    get "/about.md"
+
+    assert_equal 200, last_response.status
+    assert_equal "text/html;charset=utf-8", last_response["Content-Type"]
+    assert_includes last_response.body, "<h1>About Ruby:</h1>"
+  end
+
 end
