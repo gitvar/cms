@@ -35,7 +35,7 @@ class CMSTest < Minitest::Test
 
     assert_equal 200, last_response.status
     assert_equal "text/plain", last_response["Content-Type"]
-    assert_includes last_response.body, "addded 'id' fields for todos and lists"
+    assert_includes last_response.body, "Add reading and testing of Markdown file"
   end
 
   def test_document_not_found
