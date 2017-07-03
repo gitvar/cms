@@ -1,0 +1,13 @@
+<!-- views/edit.erb -->
+<h1>Edit</h1>
+<form method="post" action="/<%= @filename %>">
+  <label for="content">
+    <h4>Edit content of <%= @filename %>:</h4>
+  </label>
+  <div>
+    <textarea name="content" id="content" rows="20" cols="100">
+      <%= @content %>
+    </textarea>
+  </div>
+  <button type="submit">Save Changes</button>
+</form>

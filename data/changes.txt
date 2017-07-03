@@ -1,5 +1,10 @@
-bennievandermerwe in ~/launch-school-code/cms
-$ git log
+      $ git log
+commit e88da9b217547344a16461913937162b78fa33d2
+Author: gitvar <benvanderm@gmail.com>
+Date:   Sun Jul 2 21:32:07 2017 +0200
+
+    Add git log results for CMS project to changes.txt and cms_test.rb
+
 commit b225735fcfef4b9256cd76ab349d63d74b12c2be
 Author: gitvar <benvanderm@gmail.com>
 Date:   Sun Jul 2 21:25:56 2017 +0200
@@ -11,6 +16,7 @@ Author: gitvar <benvanderm@gmail.com>
 Date:   Fri Jun 30 22:04:17 2017 +0200
 
     Lesson 6: Handling requests for non-existing documents
+
 
 commit 3b891f1563c23f24fe90c8da67a0202fd3478da1
 Author: gitvar <benvanderm@gmail.com>
@@ -26,6 +32,6 @@ Date:   Tue Jun 27 11:43:51 2017 +0200
 
 commit 76da0819927608559ba81c0a03697ef8e921b98f
 Author: gitvar <benvanderm@gmail.com>
-Date:   Tue Jun 27 10:56:02 2017 +0200
+Date:   Tue Jun 27 10:56:02 2017 +0200   
 
-    first commit
+    
