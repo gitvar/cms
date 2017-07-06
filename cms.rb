@@ -75,7 +75,7 @@ get "/:filename/edit" do
   erb :edit
 end
 
-get "/:filename/delete" do
+post "/:filename/delete" do
   file_path = File.join(data_path, params[:filename])
 
   @filename = params[:filename]
@@ -86,7 +86,7 @@ get "/:filename/delete" do
 end
 
 post "/create" do
-  filename = params[:filename].to_s
+  filename = params[:filename].to_s # Makes the line below work correctly.
 
   if filename.size == 0
     session[:message] = "A name is required."

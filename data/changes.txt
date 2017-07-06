@@ -1,4 +1,4 @@
-            $ git log
+$ git log
 commit 5a559f373927fe96a056d8726881fa71bf631c89
 Author: gitvar <benvanderm@gmail.com>
 Date:   Mon Jul 3 18:26:04 2017 +0200
@@ -40,6 +40,8 @@ Author: gitvar <benvanderm@gmail.com>
 Date:   Tue Jun 27 10:56:02 2017 +0200
 
     first commit
+    
+    
     
     
     

@@ -37,6 +37,7 @@ class CMSTest < Minitest::Test
 
     assert_equal 200, last_response.status
     assert_equal "text/html;charset=utf-8", last_response["Content-Type"]
+    assert_includes last_response.body, "<title>CMS</title>"
     assert_includes last_response.body, "about.md"
     assert_includes last_response.body, "changes.txt"
   end
@@ -125,13 +126,14 @@ class CMSTest < Minitest::Test
   def test_delete_document
     create_document "test_document.txt"
 
-    get "/test_document.txt/delete"
+    post "/test_document.txt/delete"
     assert_equal 302, last_response.status
 
     get last_response["Location"]
     assert_includes last_response.body, "test_document.txt has been deleted"
 
     get "/"
+    assert_equal 200, last_response.status
     refute_includes last_response.body, "test_document.txt"
   end
 end

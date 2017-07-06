@@ -1,4 +1,4 @@
-            The Release History of the Ruby Programming Language:
+The Release History of the Ruby Programming Language:
 
 1993 - Yukihiro Matsumoto dreams up Ruby.  
 1995 - Ruby 0.95 released.  
@@ -15,6 +15,7 @@
 2016 - Ruby 2.4 released (Christmas Day! )
 
 
+    
     
     
     
