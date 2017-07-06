@@ -29,10 +29,10 @@ helpers do
 
     case File.extname(file_path)
     when ".md"
-      render_markdown(file_content)
+      erb render_markdown(file_content)
     else
       headers["Content-Type"] = "text/plain"
-      file_content
+      file_content # Notice how text files are not displayed within the layout because the erb method isn't called for them.
     end
   end
 end
@@ -49,6 +49,10 @@ get "/" do
   @files.map! { |file| File.basename(file) }.sort
 
   erb :index
+end
+
+get "/new" do
+  erb :new
 end
 
 get "/:filename" do
@@ -69,6 +73,33 @@ get "/:filename/edit" do
   @content = File.read(file_path)
 
   erb :edit
+end
+
+get "/:filename/delete" do
+  file_path = File.join(data_path, params[:filename])
+
+  @filename = params[:filename]
+  File.delete(file_path)
+  session[:message] = "#{params[:filename]} has been deleted."
+
+  redirect "/"
+end
+
+post "/create" do
+  filename = params[:filename].to_s
+
+  if filename.size == 0
+    session[:message] = "A name is required."
+    status 422
+    erb :new
+  else
+    file_path = File.join(data_path, filename)
+
+    File.write(file_path, "")
+    session[:message] = "#{params[:filename]} has been created."
+
+    redirect "/"
+  end
 end
 
 post "/:filename" do

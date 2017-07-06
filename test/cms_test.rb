@@ -72,7 +72,7 @@ class CMSTest < Minitest::Test
   end
 
   def test_editing_document
-    create_document "changes.txt", "#{%Q(<textarea name="content")}"
+    create_document "changes.txt" #, "#{%Q(<textarea name="content")}"
 
     get "/changes.txt/edit"
 
@@ -82,8 +82,6 @@ class CMSTest < Minitest::Test
   end
 
   def test_updating_document
-    create_document "changes.txt"
-
     post "/changes.txt", content: "new content"
     assert_equal 302, last_response.status
     # Testing on the Firefox browser gives a last response status of 303 when saving. Guess it is different when tests are run and server is not being used. Both 302 and 303 indicates 'redirection' so it is basically the same thing...
@@ -96,5 +94,44 @@ class CMSTest < Minitest::Test
     get "/changes.txt"
     assert_equal 200, last_response.status
     assert_includes last_response.body, "new content"
+  end
+
+  def test_view_new_document_form
+    get "/new"
+
+    assert_equal 200, last_response.status
+    assert_includes last_response.body, "<input"
+    assert_includes last_response.body, %q(<button type="submit")
+  end
+
+  def test_create_new_document
+    post "/create", filename: "test.txt"
+    assert_equal 302, last_response.status
+
+    get last_response["Location"]
+    assert_includes last_response.body, "test.txt has been created"
+
+    get "/"
+    assert_includes last_response.body, "test.txt"
+  end
+
+  def test_create_new_document_without_filename
+    post "/create", filename: ""
+
+    assert_equal 422, last_response.status
+    assert_includes last_response.body, "A name is required"
+  end
+
+  def test_delete_document
+    create_document "test_document.txt"
+
+    get "/test_document.txt/delete"
+    assert_equal 302, last_response.status
+
+    get last_response["Location"]
+    assert_includes last_response.body, "test_document.txt has been deleted"
+
+    get "/"
+    refute_includes last_response.body, "test_document.txt"
   end
 end

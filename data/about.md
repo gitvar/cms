@@ -1,13 +1,13 @@
-# About Ruby:
+# About  Ruby:
 
 
-**Ruby** is a _dynamic, reflective, object-oriented, general-purpose programming language_.
+**Ruby** is a _dynamic,  breflective, object-oriented, general-purpose programming language_.
 
-  * It was designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+  * It was  designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
 
 ---
 
-According to its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[11] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
+According to  its creator, Ruby was influenced by Perl, Smalltalk, Eiffel, Ada, and Lisp.[11] It supports multiple programming paradigms, including functional, object-oriented, and imperative. It also has a dynamic type system and automatic memory management.
 
 ---
 
@@ -123,6 +123,11 @@ Ruby 2.4.0 was released on Christmas Day in 2016. A few notable changes include:
 
 The 2.4 branch also includes performance improvements to hash table, Array#max, Array#min, and instance variable access.[46]
 
+    
+    
+    
+    
+    
     
     
     

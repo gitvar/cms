@@ -1,14 +1,17 @@
 <!-- views/index.erb -->
 <h1>Index</h1>
-<% if session[:message] %>
-  <p><%= session.delete(:message) %></p>
-<% end %>
-
 <ul>
   <% @files.each do |file| %>
     <li>
       <a href="/<%= file %>"><%= file %></a>
       <a href="/<%= file %>/edit">Edit</a>
+      <!-- <a href="/<%= file %>/delete">Delete</a> -->
+      <form class="inline" method="post" action="<%= file %>/delete">
+        <button type="submit">delete</button>
+      </form>
     </li>
   <% end %>
+  <p>
+    <a href="/new">Create a new document</a>
+  </p>
 </ul>
