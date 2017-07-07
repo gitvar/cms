@@ -27,7 +27,8 @@ First publication
 The first public release of Ruby 0.95 was announced on Japanese domestic newsgroups on December 21, 1995.[18][19] Subsequently, three more versions of Ruby were released in two days.[14] The release coincided with the launch of the Japanese-language ruby-list mailing list, which was the first mailing list for the new language.
 
 Already present at this stage of development were many of the features familiar in later releases of Ruby, including object-oriented design, classes with inheritance, mixins, iterators, closures, exception handling and garbage collection.[20]
-Early releases
+
+## Early releases
 
 Following the release of Ruby 0.95 in 1995, several stable versions of Ruby were released in the following years:
 
@@ -35,102 +36,3 @@ Following the release of Ruby 0.95 in 1995, several stable versions of Ruby were
     Ruby 1.2: December 1998
     Ruby 1.4: August 1999
     Ruby 1.6: September 2000
-
-In 1997, the first article about Ruby was published on the Web. In the same year, Matsumoto was hired by netlab.jp to work on Ruby as a full-time developer.[14]
-
-In 1998, the Ruby Application Archive was launched by Matsumoto, along with a simple English-language homepage for Ruby.[14]
-
-In 1999, the first English language mailing list ruby-talk began, which signaled a growing interest in the language outside Japan.[21] In this same year, Matsumoto and Keiju Ishitsuka wrote the first book on Ruby, The Object-oriented Scripting Language Ruby (オブジェクト指向スクリプト言語 Ruby), which was published in Japan in October 1999. It would be followed in the early 2000s by around 20 books on Ruby published in Japanese.[14]
-
-By 2000, Ruby was more popular than Python in Japan.[22] In September 2000, the first English language book Programming Ruby was printed, which was later freely released to the public, further widening the adoption of Ruby amongst English speakers. In early 2002, the English-language ruby-talk mailing list was receiving more messages than the Japanese-language ruby-list, demonstrating Ruby's increasing popularity in the English-speaking world.
-Ruby 1.8
-
-Ruby 1.8 was initially released in August 2003, was stable for a long time, and was retired June 2013.[23] Although deprecated, there is still code based on it. Ruby 1.8 is only partially compatible with Ruby 1.9.
-
-Ruby 1.8 has been the subject of several industry standards. The language specifications for Ruby were developed by the Open Standards Promotion Center of the Information-Technology Promotion Agency (a Japanese government agency) for submission to the Japanese Industrial Standards Committee (JISC) and then to the International Organization for Standardization (ISO). It was accepted as a Japanese Industrial Standard (JIS X 3017) in 2011[24] and an international standard (ISO/IEC 30170) in 2012.[25][26]
-
-Around 2005, interest in the Ruby language surged in tandem with Ruby on Rails, a web framework written in Ruby. Rails is frequently credited with increasing awareness of Ruby.[27]
-Ruby 1.9
-
-Ruby 1.9 was released in December 2007. Effective with Ruby 1.9.3, released October 31, 2011,[28] Ruby switched from being dual-licensed under the Ruby License and the GPL to being dual-licensed under the Ruby License and the two-clause BSD license.[29] Adoption of 1.9 was slowed by changes from 1.8 that required many popular third party gems to be rewritten.
-
-Ruby 1.9 introduces many significant changes over the 1.8 series.[30] Examples:
-
-    block local variables (variables that are local to the block in which they are declared)
-    an additional lambda syntax: f = ->(a,b) { puts a + b }
-    per-string character encodings are supported
-    new socket API (IPv6 support)
-    require_relative import security
-
-Ruby 1.9 has been obsolete since February 23, 2015,[31] and it will no longer receive bug and security fixes. Users are advised to upgrade to a more recent version.
-Ruby 2.0
-
-Ruby 2.0 added several new features, including:
-
-    method keyword arguments,
-    a new method, Module#prepend, for extending a class,
-    a new literal for creating an array of symbols,
-    new API for the lazy evaluation of Enumerables, and
-    a new convention of using #to_h to convert objects to Hashes.[32]
-
-Ruby 2.0 is intended to be fully backward compatible with Ruby 1.9.3. As of the official 2.0.0 release on February 24, 2013, there were only five known (minor) incompatibilities.[33]
-
-It has been obsolete since February 22, 2016,[34] and it will no longer receive bug and security fixes. Users are advised to upgrade to a more recent version.
-Ruby 2.1
-
-Ruby 2.1.0 was released on Christmas Day in 2013.[35] The release includes speed-ups, bugfixes, and library updates.
-
-Starting with 2.1.0, Ruby's versioning policy is more like semantic versioning.[36] Although similar, Ruby's versioning policy is not compatible with semantic versioning:
-Ruby 	Semantic versioning
-MAJOR: Increased when incompatible change which can’t be released in MINOR. Reserved for special events. 	MAJOR: Increased when you make incompatible API changes.
-MINOR: increased every Christmas, may be API incompatible. 	MINOR: increased when you add functionality in a backwards-compatible manner.
-TEENY: security or bug fix which maintains API compatibility. May be increased more than 10 (such as 2.1.11), and will be released every 2–3 months. 	PATCH: increased when you make backwards-compatible bug fixes.
-PATCH: number of commits since last MINOR release (will be reset at 0 when releasing MINOR). 	-
-
-Semantic versioning also provides additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format, not available at Ruby.
-
-Ruby 2.1 has been obsolete since April 1, 2017,[37] and it will no longer receive bug and security fixes. Users are advised to upgrade to a more recent version.
-Ruby 2.2
-
-Ruby 2.2.0 was released on Christmas Day in 2014.[38] The release includes speed-ups, bugfixes, and library updates and removes some deprecated APIs. Most notably, Ruby 2.2.0 introduces changes to memory handling – an incremental garbage collector, support for garbage collection of symbols and the option to compile directly against jemalloc. It also contains experimental support for using vfork(2) with system() and spawn(), and added support for the Unicode 7.0 specification.
-
-Features that were made obsolete or removed include callcc, the DL library, Digest::HMAC, lib/rational.rb, lib/complex.rb, GServer, Logger::Application as well as various C API functions.[39]
-
-PowerPC64 performance
-    Since version 2.2.1,[40] Ruby MRI performance on PowerPC64 was improved.[41][42][43]
-
-Ruby 2.3
-
-Ruby 2.3.0 was released on Christmas Day in 2015. A few notable changes include:
-
-    The ability to mark all string literals as frozen by default with a consequently large performance increase in string operations.[44]
-    Hash comparison to allow direct checking of key/value pairs instead of just keys.
-    A new safe navigation operator &. that can ease nil handling (e.g. instead of if obj && obj.foo && obj.foo.bar, we can use if obj&.foo&.bar).
-    The did_you_mean gem is now bundled by default and required on startup to automatically suggest similar name matches on a NameError or NoMethodError.
-    Hash#dig and Array#dig to easily extract deeply nested values (e.g. given profile = { social: { wikipedia: { name: 'Foo Baz' } } }, the value Foo Baz can now be retrieved by profile.dig(:social, :wikipedia, :name)).
-    .grep_v(regexp) which will match all negative examples of a given regular expression in addition to other new features.
-
-The 2.3 branch also includes many performance improvements, updates, and bugfixes including changes to Proc#call, Socket and IO use of exception keywords, Thread#name handling, default passive Net::FTP connections, and Rake being removed from stdlib.[45]
-Ruby 2.4
-
-Ruby 2.4.0 was released on Christmas Day in 2016. A few notable changes include:
-
-    Binding#irb: Start a REPL session similar to binding.pry
-    Unify Fixnum and Bignum into Integer class
-    String supports Unicode case mappings, not just ASCII
-    a new method, Regexp#match?, which is a faster boolean version of Regexp#match
-    Thread deadlock detection now shows threads with their backtrace and dependency
-
-The 2.4 branch also includes performance improvements to hash table, Array#max, Array#min, and instance variable access.[46]
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
