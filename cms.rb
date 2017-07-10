@@ -2,14 +2,12 @@ require "sinatra"
 require "sinatra/reloader"
 require "tilt/erubis"
 require "redcarpet"
-# require "sinatra/content_for"
 
 configure do
   enable :sessions
   set :session_secret, 'super secret'
 end
 
-# root = File.expand_path("..", __FILE__)
 def data_path
   if ENV["RACK_ENV"] == "test"
     File.expand_path("../test/data", __FILE__)
@@ -35,6 +33,17 @@ helpers do
       file_content # Notice how text files are not displayed within the layout because the erb method isn't called for them.
     end
   end
+
+  def user_signed_in?
+    session.has_key?(:username)
+  end
+
+  def require_signed_in_user
+    unless user_signed_in?
+      session[:message] = "You must be signed in to do that."
+      redirect "/"
+    end
+  end
 end
 
 get "/" do
@@ -52,6 +61,8 @@ get "/" do
 end
 
 get "/new" do
+  require_signed_in_user
+
   erb :new
 end
 
@@ -67,6 +78,8 @@ get "/:filename" do
 end
 
 get "/:filename/edit" do
+  require_signed_in_user
+
   file_path = File.join(data_path, params[:filename])
 
   @filename = params[:filename]
@@ -76,6 +89,8 @@ get "/:filename/edit" do
 end
 
 post "/:filename/delete" do
+  require_signed_in_user
+
   file_path = File.join(data_path, params[:filename])
 
   @filename = params[:filename]
@@ -86,6 +101,8 @@ post "/:filename/delete" do
 end
 
 post "/create" do
+  require_signed_in_user
+
   filename = params[:filename].to_s # Makes the line below work correctly.
 
   if filename.size == 0
@@ -103,6 +120,8 @@ post "/create" do
 end
 
 post "/:filename" do
+  require_signed_in_user
+
   file_path = File.join(data_path, params[:filename])
 
   File.write(file_path, params[:content])
