@@ -1,4 +1,37 @@
+New Branch!
+
+bennievandermerwe in ~/launch-school-code/cms
 $ git log
+commit 5575501562aa79935a07883f5367edab47325b59
+Author: gitvar <benvanderm@gmail.com>
+Date:   Mon Jul 10 22:56:06 2017 +0200
+
+    lesson 16 Restrincting Access
+
+commit 24b452fe25716629e648c4c18450e53efa77b7f3
+Author: gitvar <benvanderm@gmail.com>
+Date:   Sat Jul 8 20:21:37 2017 +0200
+
+    lesson 15 - session access in testing
+
+commit 9dd1aa92af816cee3f524f95323d28ae3a489876
+Author: gitvar <benvanderm@gmail.com>
+Date:   Fri Jul 7 23:12:34 2017 +0200
+
+    lesson_14
+
+commit cd1846258d1d5511bf58a438622d67d346d4df63
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu Jul 6 20:05:43 2017 +0200
+
+    First commit on new branch
+
+commit 64b91a2bcd2846447bdd80ecb26cb0aedc1ce923
+Author: gitvar <benvanderm@gmail.com>
+Date:   Thu Jul 6 13:38:04 2017 +0200
+
+    CMS Lessons 10 to 13
+
 commit 5a559f373927fe96a056d8726881fa71bf631c89
 Author: gitvar <benvanderm@gmail.com>
 Date:   Mon Jul 3 18:26:04 2017 +0200
@@ -15,7 +48,7 @@ commit b225735fcfef4b9256cd76ab349d63d74b12c2be
 Author: gitvar <benvanderm@gmail.com>
 Date:   Sun Jul 2 21:25:56 2017 +0200
 
-    Add  reading and testing of  Markdown file
+    Add reading and testing of Markdown file
 
 commit 5e0e190326ee8ae2cb16c9027f3204aa3f1b120c
 Author: gitvar <benvanderm@gmail.com>
@@ -40,8 +73,3 @@ Author: gitvar <benvanderm@gmail.com>
 Date:   Tue Jun 27 10:56:02 2017 +0200
 
     first commit
-    
-    
-    
-    
-    

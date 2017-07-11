@@ -2,6 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 require "tilt/erubis"
 require "redcarpet"
+require "yaml"
 
 configure do
   enable :sessions
@@ -17,6 +18,15 @@ def data_path
 end
 
 helpers do
+  def load_user_credentials
+    credentials_path = if ENV["RACK_ENV"] == "test"
+      File.expand_path("../test/users.yml", __FILE__)
+    else
+      File.expand_path("../users.yml", __FILE__)
+    end
+    YAML.load_file(credentials_path)
+  end
+
   def render_markdown(markdown_text)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     markdown.render(markdown_text)
@@ -149,7 +159,11 @@ end
 # end
 
 post "/users/signin" do
-  if params[:username] == "admin" && params[:password] == "secret"
+  credentials = load_user_credentials
+  username = params[:username]
+
+  if credentials.key?(username) && credentials[username] == params[:password]
+    # if params[:username] == "admin" && params[:password] == "secret"
     session[:username] = params[:username]
     session[:message] = "Welcome!"
     redirect "/"

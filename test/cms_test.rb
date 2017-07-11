@@ -4,6 +4,7 @@ require "fileutils"
 
 require "minitest/autorun"
 require "rack/test"
+require "yaml"
 
 require_relative "../cms"
 
