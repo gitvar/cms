@@ -1,5 +1,4 @@
-{
-  admin:  "secret",
-  ben:    "pwd",
-  zan:    "bliksem"
-}
+---
+admin:  "secret"
+ben:    "pwd"
+zan:    "bliksem"
