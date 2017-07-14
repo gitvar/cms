@@ -1,7 +1,12 @@
+<!DOCTYPE html>
 <html>
-  <title>CMS</title>
-  <link href="/stylesheets/cms.css" rel="stylesheet" type="text/css" />
+  <head>
+    <title>CMS</title>
+    <link href="/stylesheets/cms.css" rel="stylesheet" type="text/css" />
+  </head>
   <body>
+    <% puts_this("Hello from '/views/layout.erb'!") %>
+
     <% if session[:message] %>
       <p class="message"><%= session.delete(:message) %></p>
     <% end %>

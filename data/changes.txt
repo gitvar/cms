@@ -1,12 +1,22 @@
-New Branch!
-
 bennievandermerwe in ~/launch-school-code/cms
 $ git log
+commit e6f8d172eacb22b6c5feeee65165244eb467553b
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue Jul 11 18:02:13 2017 +0200
+
+    Lesson 17 - Storing user details in a yaml file - 2
+
+commit 65e97d35029ed65cc31d12b1696094f0b503cc27
+Author: gitvar <benvanderm@gmail.com>
+Date:   Tue Jul 11 16:55:11 2017 +0200
+
+    Lesson 17 - Storing user details in a yaml file
+
 commit 5575501562aa79935a07883f5367edab47325b59
 Author: gitvar <benvanderm@gmail.com>
 Date:   Mon Jul 10 22:56:06 2017 +0200
 
-    lesson 16 Restrincting Access
+    lesson 16 Restringting Access
 
 commit 24b452fe25716629e648c4c18450e53efa77b7f3
 Author: gitvar <benvanderm@gmail.com>
